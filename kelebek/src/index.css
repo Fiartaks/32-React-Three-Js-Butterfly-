@@ -1,0 +1,62 @@
+/* styles.css */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e0f7fa; /* Daha hafif bir arka plan rengi */
+  font-family: 'Arial', sans-serif;
+}
+
+/* styles.css */
+input {
+  position: absolute; /* Konumu mutlak yap */
+  top: 530px; /* Yukarıdan 50px boşluk */
+  left: 50%; /* Ortalamak için */
+  transform: translateX(-50%); /* Ortalamak için sağa kaydırma */
+  padding: 15px 25px;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  font-size: 18px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+input::placeholder {
+  color: #a0a0a0;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+input:hover::placeholder {
+  opacity: 0.5;
+}
+
+input:focus {
+  border-color: #0056b3;
+  animation: pulse 0.5s ease-out infinite;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Odaklanıldığında daha belirgin bir gölge */
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0px rgba(0, 123, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 1);
+  }
+  100% {
+    box-shadow: 0 0 0px rgba(0, 123, 255, 0.5);
+  }
+}
+
+h1 {
+  text-align: center;
+  color: #007bff; /* Başlık rengi */
+  font-size: 2.5rem; /* Başlık boyutu */
+  margin-bottom: 20px; /* Başlık ve input arasında mesafe */
+}
